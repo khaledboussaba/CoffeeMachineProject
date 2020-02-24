@@ -4,9 +4,11 @@ public class Command {
 	
 	private DrinkType drinkType;
     private int sugarQuantity;
-    
-	public Command(DrinkType drinkType) {
+    private double insertedAmount;
+	
+	public Command(DrinkType drinkType, double insertedAmount) {
 		setDrinkType(drinkType);
+		this.insertedAmount = insertedAmount;
 	}
 
 	public void addOneSugar() {
@@ -29,6 +31,14 @@ public class Command {
 		this.sugarQuantity = sugarQuantity;
 	}
 	
+	public double getInsertedAmount() {
+		return insertedAmount;
+	}
+
+	public void setInsertedAmount(double insertedAmount) {
+		this.insertedAmount = insertedAmount;
+	}
+
 	public String getCodeDrinkType() {
 		if (drinkType.equals(DrinkType.COFFEE))
 			return "C";
