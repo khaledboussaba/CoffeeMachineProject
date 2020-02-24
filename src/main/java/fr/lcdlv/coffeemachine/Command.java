@@ -2,10 +2,10 @@ package fr.lcdlv.coffeemachine;
 
 public class Command {
 	
-	private String drinkType;
+	private DrinkType drinkType;
     private int sugarQuantity;
     
-	public Command(String drinkType) {
+	public Command(DrinkType drinkType) {
 		setDrinkType(drinkType);
 	}
 
@@ -13,11 +13,11 @@ public class Command {
 		this.sugarQuantity++;
 	}
 
-	public String getDrinkType() {
+	public DrinkType getDrinkType() {
 		return drinkType;
 	}
 
-	public void setDrinkType(String drinkType) {
+	public void setDrinkType(DrinkType drinkType) {
 		this.drinkType = drinkType;
 	}
 
@@ -30,9 +30,9 @@ public class Command {
 	}
 	
 	public String getCodeDrinkType() {
-		if (drinkType.equals("Coffee"))
+		if (drinkType.equals(DrinkType.COFFEE))
 			return "C";
-		if (drinkType.equals("Chocolate"))
+		if (drinkType.equals(DrinkType.CHOCOLATE))
 			return "H";
 		return "T";
 	}

@@ -12,7 +12,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneTeaWithoutSugar() {
-		command = new Command("Tea");
+		command = new Command(DrinkType.TEA);
 		drinkMaker = new DrinkMakerProtocol(command);
 		message = drinkMaker.makeDrink();
 		assertEquals(message, "T::");
@@ -20,7 +20,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneTeaWithOneSugar() {
-		command = new Command("Tea");
+		command = new Command(DrinkType.TEA);
 		command.addOneSugar();
 		drinkMaker = new DrinkMakerProtocol(command);
 		message = drinkMaker.makeDrink();
@@ -29,7 +29,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneTeaWithTwoSugar() {
-		command = new Command("Tea");
+		command = new Command(DrinkType.TEA);
 		command.addOneSugar();
 		command.addOneSugar();
 		drinkMaker = new DrinkMakerProtocol(command);
@@ -39,7 +39,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneChocolateWithoutSugar() {
-		command = new Command("Chocolate");
+		command = new Command(DrinkType.CHOCOLATE);
 		drinkMaker = new DrinkMakerProtocol(command);
 		message = drinkMaker.makeDrink();
 		assertEquals(message, "H::");
@@ -47,7 +47,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneChocolateWithOneSugar() {
-		command = new Command("Chocolate");
+		command = new Command(DrinkType.CHOCOLATE);
 		command.addOneSugar();
 		drinkMaker = new DrinkMakerProtocol(command);
 		message = drinkMaker.makeDrink();
@@ -56,7 +56,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneChocolateWithTwoSugar() {
-		command = new Command("Chocolate");
+		command = new Command(DrinkType.CHOCOLATE);
 		command.addOneSugar();
 		command.addOneSugar();
 		drinkMaker = new DrinkMakerProtocol(command);
@@ -66,7 +66,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneCoffeeWithoutSugar() {
-		command = new Command("Coffee");
+		command = new Command(DrinkType.COFFEE);
 		drinkMaker = new DrinkMakerProtocol(command);
 		message = drinkMaker.makeDrink();
 		assertEquals(message, "C::");
@@ -74,7 +74,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneCoffeeWithOneSugar() {
-		command = new Command("Coffee");
+		command = new Command(DrinkType.COFFEE);
 		command.addOneSugar();
 		drinkMaker = new DrinkMakerProtocol(command);
 		message = drinkMaker.makeDrink();
@@ -83,7 +83,7 @@ public class MakingDrinksTest {
 	
 	@Test
 	public void makeOneCoffeeWithTwoSugar() {
-		command = new Command("Coffee");
+		command = new Command(DrinkType.COFFEE);
 		command.addOneSugar();
 		command.addOneSugar();
 		drinkMaker = new DrinkMakerProtocol(command);
