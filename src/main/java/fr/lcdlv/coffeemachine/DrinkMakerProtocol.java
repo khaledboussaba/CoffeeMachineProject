@@ -9,13 +9,21 @@ public class DrinkMakerProtocol {
 	}
 
 	public String makeDrink() {
-		if (this.command.getDrinkType().equals("Chocolate")) {
-			return "H::";
+		String message = "";
+		switch (command.getSugarQuantity()) {
+		case 2:
+			message += command.getCodeDrinkType() + ":2:0";
+			break;
+		case 1:
+			message += command.getCodeDrinkType() + ":1:0";
+			break;
+		case 0:
+			message += command.getCodeDrinkType() + "::";
+			break;
+		default:
+			break;
 		}
-		if (this.command.getDrinkType().equals("Coffee")) {
-			return "C:2:0";
-		}
-		return "T:1:0";
-	}	
+		return message;
+	}
 	
 }

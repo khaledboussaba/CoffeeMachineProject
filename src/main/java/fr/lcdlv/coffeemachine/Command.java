@@ -6,7 +6,7 @@ public class Command {
     private int sugarQuantity;
     
 	public Command(String drinkType) {
-		this.drinkType = drinkType;
+		setDrinkType(drinkType);
 	}
 
 	public void addOneSugar() {
@@ -27,6 +27,14 @@ public class Command {
 
 	public void setSugarQuantity(int sugarQuantity) {
 		this.sugarQuantity = sugarQuantity;
+	}
+	
+	public String getCodeDrinkType() {
+		if (drinkType.equals("Coffee"))
+			return "C";
+		if (drinkType.equals("Chocolate"))
+			return "H";
+		return "T";
 	}
 
 }
