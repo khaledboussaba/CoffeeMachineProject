@@ -22,6 +22,17 @@ public class MakingDrinksTest {
 		String message = drinkMaker.makeDrink();
 		assertEquals(message, "H::");
 	}
+	
+	@Test
+	public void makeOneCoffeeWithTwoSugar() {
+		Command command = new Command("Coffee");
+		command.addOneSugar();
+		command.addOneSugar();
+		DrinkMakerProtocol drinkMaker = new DrinkMakerProtocol(command);
+		String message = drinkMaker.makeDrink();
+		assertEquals(message, "C:2:0");
+	}
+
 
 
 }

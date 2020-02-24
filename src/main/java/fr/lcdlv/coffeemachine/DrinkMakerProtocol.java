@@ -12,6 +12,9 @@ public class DrinkMakerProtocol {
 		if (this.command.getDrinkType().equals("Chocolate")) {
 			return "H::";
 		}
+		if (this.command.getDrinkType().equals("Coffee")) {
+			return "C:2:0";
+		}
 		return "T:1:0";
 	}	
 	
