@@ -6,7 +6,7 @@ public enum DrinkType {
 	private double price;
 	
 	DrinkType(double price) {
-		this.price = price;
+		setPrice(price);
 	}
 
 	public double getPrice() {

@@ -25,4 +25,8 @@ public class MessageFormater {
 		return message;
 	}
 
+	public String formatMessageShortage(DrinkType drinkType) {
+		return drinkType.name() + " is in shortage, a notification has been sent !";
+	}
+
 }

@@ -15,7 +15,7 @@ public class Command {
 	public Command(DrinkType drinkType, boolean extraHot, double insertedAmount) {
 		setDrinkType(drinkType);
 		setExtraHot(extraHot);
-		this.insertedAmount = insertedAmount;
+		setInsertedAmount(insertedAmount);
 	}
 
 	public void addOneSugar() {
