@@ -9,6 +9,9 @@ public class DrinkMakerProtocol {
 	}
 
 	public String makeDrink() {
+		if (this.command.getDrinkType().equals("Chocolate")) {
+			return "H::";
+		}
 		return "T:1:0";
 	}	
 	

@@ -13,4 +13,20 @@ public class Command {
 		this.sugarQuantity++;
 	}
 
+	public String getDrinkType() {
+		return drinkType;
+	}
+
+	public void setDrinkType(String drinkType) {
+		this.drinkType = drinkType;
+	}
+
+	public int getSugarQuantity() {
+		return sugarQuantity;
+	}
+
+	public void setSugarQuantity(int sugarQuantity) {
+		this.sugarQuantity = sugarQuantity;
+	}
+
 }

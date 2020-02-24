@@ -14,5 +14,14 @@ public class MakingDrinksTest {
 		String message = drinkMaker.makeDrink();
 		assertEquals(message, "T:1:0");
 	}
+	
+	@Test
+	public void makeOneChocolateWithoutSugar() {
+		Command command = new Command("Chocolate");
+		DrinkMakerProtocol drinkMaker = new DrinkMakerProtocol(command);
+		String message = drinkMaker.makeDrink();
+		assertEquals(message, "H::");
+	}
+
 
 }
